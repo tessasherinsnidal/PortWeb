@@ -5,6 +5,20 @@
 @-webkit-viewport { width: device-width; scale: 1; }
 @viewport { width: device-width; scale: 1; }
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E1B000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #F37021;
+}
 
 p {
 	max-width: 500px;
@@ -106,6 +120,8 @@ summary {
 
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
+	  	text-transform: uppercase;
+	  
   }
 
 audio,
@@ -213,6 +229,7 @@ svg.img-flex {
 .button {
  width: 6em;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .list-group-inline > dd,
@@ -1138,7 +1155,9 @@ p,
   pre,
   table,
 	caption {
-		font-family: 'Roboto', sans-serif;
+		font-family: bebas-neue-pro, sans-serif;
+		font-weight: 400;
+		font-style: normal;
 	}
 
 html {
@@ -2605,9 +2624,10 @@ legend {
 
 }
 
-html {
-font-family: 'Bebas Neue', sans-serif;
-	font-style: bold;
+html, button {
+	font-family: bebas-neue-pro, sans-serif;
+	font-weight: 600;
+	font-style: normal;
 }
 
 .source-code {
@@ -2683,19 +2703,19 @@ font-family: 'Bebas Neue', sans-serif;
 }
 
 .text-gold {
-	color: #E1B000;
+	color: #E1B000!important;
 }
 
 .text-teal {
-	color: #0096A4;
+	color: #0096A4!important;
 }
 
 .text-indigo {
-	color: #2D315D;
+	color: #2D315D!important;
 }
 
 .text-orange {
-	color: #F37021;
+	color: #F37021!important;
 }
 
 .inline {
@@ -2712,7 +2732,7 @@ font-family: 'Bebas Neue', sans-serif;
 	background-image: url("../images/bg.btn.gold.svg");
 	postion: fixed;
 	background-size: auto;
-	text-shadow: 1.5px 1.5px #fff;
+	text-shadow: 1px 1px #fff;
 	background-repeat: no-repeat;
 }
 
@@ -2720,7 +2740,7 @@ font-family: 'Bebas Neue', sans-serif;
 	background-image: url("../images/bg.btn.indigo.svg");
 	postion: fixed;
 	background-size: auto;
-	text-shadow: 1.5px 1.5px #fff;
+	text-shadow: 1px 1px #fff;
 	background-repeat: no-repeat;
 }
 
@@ -2728,7 +2748,7 @@ font-family: 'Bebas Neue', sans-serif;
 	background-image: url("../images/bg.btn.teal.svg");
 	postion: fixed;
 	background-size: auto;
-	text-shadow: 1.5px 1.5px #fff;
+	text-shadow: 1px 1px #fff;
 	background-repeat: no-repeat;
 }
 
@@ -2736,7 +2756,7 @@ font-family: 'Bebas Neue', sans-serif;
 	background-image: url("../images/bg.btn.orange.svg");
 	postion: fixed;
 	background-size: auto;
-	text-shadow: 1.5px 1.5px #fff;
+	text-shadow: 1px 1px #fff;
 	background-repeat: no-repeat;
 }
 
@@ -2835,7 +2855,7 @@ font-family: 'Bebas Neue', sans-serif;
   color: #2D315D;
   line-height: .925;
   z-index: 1;
-	text-shadow: 1.5px 1.5px #fff;
+	text-shadow: 1px 1px #fff;
 }
 
 
@@ -2953,6 +2973,101 @@ h3 {
   font-family: "source-code-pro", monospace;
 }
 
+.card-overlay {
+	background: linear-gradient(to right, rgb(225,176,0), rgba(255,176,0,0));
+	width:100%;
+	height: 100%;
+	position:absolute;
+	top: 0;
+	opacity: .75;
+}
+
+
+//**Photo gallery**//
+
+img {
+  vertical-align: middle;
+}
+
+.containers {
+  position: relative;
+}
+
+.gallery-cont {
+	max-width: 966.63px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #2D315D;
+}
+
+.numbertext {
+  color: #2D315D;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: left;
+  background-color: #E1B000;
+  padding: 5px 0 10px 15px;
+  color: #2D315D;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column-1-6 {
+  float: left;
+  width: 16.66%;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
 @media only screen and (min-width: 25em) {
 
   .border {
@@ -3026,7 +3141,7 @@ h3 {
 	left: 15rem;
   	bottom: -14rem;
 
-}
+	}
 	
 	.case-study {
 		width: 48%;
@@ -3054,6 +3169,10 @@ h3 {
     float: left;
   }
 	
+	.card .card-link .label > h2, .case-study .card-link .label > h2, .teal, .orange, .indigo, .gold {
+		text-shadow: 1.5px 1.5px #fff;
+	}
+	
 	.video-wrapper {
 		overflow: hidden;
 		height: 100%;
@@ -3078,6 +3197,12 @@ h3 {
     width: 25%;
 	  height:100%;
   }
+	
+	.disable {
+		pointer-events: none;
+		opacity: 1;
+    	transform: translateY(10px);
+	}
 	
 	a > .overlay {
 		width:100%;
@@ -3203,5 +3328,107 @@ h3 {
     font-size: 2.5em;
   }
 
+}
+
+/* popup question box */
+
+
+/* Set a style for all buttons */
+.question-button {
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.question-button:hover {
+  opacity:1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+	font-weight: 400!important;
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: #E1B000;
+	color: #2D315D;
+}
+
+/* Add padding and center-align text to the container */
+.question-container, .question-container p {
+  padding: 16px;
+  text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #2D315D;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #2D315D;
+  margin-bottom: 25px;
+}
+ 
+/* The Modal Close Button (x) */
+.question-close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #E1B000;
+}
+
+.question-close:hover,
+.question-close:focus {
+  color: #0096A4;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+     width: 100%;
+  }
 }
 
