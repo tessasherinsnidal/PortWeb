@@ -11,78 +11,89 @@
 </head>
 	
 <body>
-
-  <main>
-
-	<div class="border">
-		<div class="colour">
+	<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+		
+	  <a href="./illustration.layout.html">Illustration / Layout</a>
+	  	<a class="second" href="./illustration.layout/marvelverse.html">Marvelverse</a>
+		<a class="second" href="./illustration.layout/marvelverse.html">Scouts Canada Work</a>
+	  	<a class="second" href="./illustration.layout/marvelverse.html">Guy Ritchie Quotebook</a>
+	  	<a class="second" href="./illustration.layout/marvelverse.html">The Call of Cthulhu</a>
+	  <a href="./motion.html">Motion</a>
+	  <a href="./ux.ui.html">UX / UI</a>
+	  <a href="/branding.html">Branding</a>
 	</div>
+  <main id="main">
 
-	<div class="cards">
-	  <div class="card img-one">
-		<a class="card-link" href="./illustration.layout.html">
-		  <div class="label">
-			<h2>Illustration / <br>Layout</h2>
+	<div class="border"> 
+		<div class="colour"></div>
+		<div class="cards">
+		  <div class="card img-one">
+			<a class="card-link" href="./illustration.layout.html">
+			  <div class="label">
+				<h2>Illustration / <br>Layout</h2>
+			  </div>
+			  <div class="arrow">
+				<img src="./images/arrow1.svg" alt="">
+			  </div>
+			</a>
 		  </div>
-		  <div class="arrow">
-			<img src="./images/arrow1.svg" alt="">
+		  <div class="card img-two">
+			<a class="card-link" href="./motion.html">
+				<div class="video-wrapper">
+					<video class="banner-vid" autoplay muted loop id="myVideo">
+					  <source src="./images/rotoscoping.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="overlay"></div>
+				<div class="label">
+					<h2>Motion</h2>
+				</div>
+				<div class="arrow">
+					<img src="./images/arrow2.svg" alt="">
+				</div>
+			</a>
 		  </div>
-		</a>
-	  </div>
-	  <div class="card img-two">
-		<a class="card-link" href="./motion.html">
-			<div class="video-wrapper">
-				<video class="banner-vid" autoplay muted loop id="myVideo">
-				  <source src="./images/rotoscoping.mp4" type="video/mp4">
-				</video>
-			</div>
-			<div class="overlay"></div>
-			<div class="label">
-				<h2>Motion</h2>
-			</div>
-			<div class="arrow">
-				<img src="./images/arrow2.svg" alt="">
-			</div>
-		</a>
-	  </div>
-	  <div class="card img-three">
-		<a class="card-link" href="./ux.ui.html">
-		  <div class="label">
-			<h2>UX /<br>UI</h2>
+		  <div class="card img-three">
+			<a class="card-link" href="./ux.ui.html">
+			  <div class="label">
+				<h2>UX /<br>UI</h2>
+			  </div>
+			  <div class="arrow">
+				<img src="./images/arrow3.svg" alt="">
+			  </div>
+			</a>
 		  </div>
-		  <div class="arrow">
-			<img src="./images/arrow3.svg" alt="">
+		  <div class="card img-four">
+			<a class="card-link" href="./branding.html">
+			  <div class="label">
+				<h2>Branding</h2>
+			  </div>
+			  <div class="arrow">
+				<img src="./images/arrow4.svg" alt="">
+			  </div>
+			</a>
 		  </div>
-		</a>
-	  </div>
-	  <div class="card img-four">
-		<a class="card-link" href="./branding.html">
-		  <div class="label">
-			<h2>Branding</h2>
-		  </div>
-		  <div class="arrow">
-			<img src="./images/arrow4.svg" alt="">
-		  </div>
-		</a>
-	  </div>
-	</div>
+		</div>
 
-	<div class="text">
-		<h1 class="push-1-2">
-		  <img class="title" src="./images/sherin.snidal.svg" alt="Portfolio of Tessa Sherin-Snidal">
-		</h1>
-	</div>
+		<div class="text">
+			<h1 class="push-1-2">
+			  <img class="title" src="./images/sherin.snidal.svg" alt="Portfolio of Tessa Sherin-Snidal">
+			</h1>
+		</div>
 
-	<nav>
-	  <ul class="list-group buttons">
-		<li class=""><a class="button btn-current kilo current" href="./home.html">Home</a></li>
-		<li><a class="button btn-gold kilo" href="./shop.html">Shop</a></li>
-		<li><a class="button btn-gold kilo" href="./about.html">About</a></li>
-	  </ul>
-	</nav>
-
+		<nav>
+		  <ul class="list-group buttons">
+			<li><button class="openbtn button btn-gold kilo" onclick="openNav()">☰</button></li>
+			<li><a class="button btn-current kilo current" href="./home.html">Home</a></li>
+			<li><a class="button btn-gold kilo" href="./shop.html">Shop</a></li>
+			<li><a class="button btn-gold kilo" href="./about.html">About</a></li>
+		  </ul>
+		</nav>
+	  </div>
   </main>
 
+	<script src="./js/main.js"></script>
 
 </body>
 </html>

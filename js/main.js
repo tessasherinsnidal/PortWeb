@@ -120,6 +120,36 @@
 	  captionText.innerHTML = dots[slideIndex-1].alt;
 	}
 
+//***Gallery click no thumbnails***//
+	var slideIndex3 = 1;
+	showSlides3(slideIndex3);
+
+	function plusSlides3(n) {
+	  showSlides3(slideIndex3 += n);
+	}
+
+	function currentSlide3(n) {
+	  showSlides3(slideIndex3 = n);
+	}
+
+	function showSlides3(n) {
+	  var i;
+	  var slides3 = document.getElementsByClassName("mySlides3");
+	  var dots3 = document.getElementsByClassName("dots3");
+		var section3 = document.getElementsByClassName("demo3");
+	  var captionText3 = document.getElementById("caption3");
+	  if (n > slides3.length) {slideIndex3 = 1}
+	  if (n < 1) {slideIndex3 = slides3.length}
+	  for (i = 0; i < slides3.length; i++) {
+		  slides3[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots3.length; i++) {
+		  dots3[i].className = dots3[i].className.replace(" active3", "");
+	  }
+	  slides3[slideIndex3-1].style.display = "block";
+	  dots3[slideIndex3-1].className += " active3";
+	  captionText3.innerHTML = section3[slideIndex3-1].alt;
+	}
 
 ///***Click next slideshow***///
 
@@ -177,4 +207,13 @@
 	  dots[slideIndex-1].className += " w3-black";
 	}
 
-///*** Question popup box ***///
+///*** Sidebar ***///
+	function openNav() {
+	  document.getElementById("mySidebar").style.width = "250px";
+	  document.getElementById("main").style.marginRight = "250px";
+	}
+
+	function closeNav() {
+	  document.getElementById("mySidebar").style.width = "0";
+	  document.getElementById("main").style.marginRight= "0";
+	}

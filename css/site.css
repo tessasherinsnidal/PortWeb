@@ -120,7 +120,7 @@ summary {
 
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
-	  	text-transform: uppercase;
+	text-transform: uppercase;
 	  
   }
 
@@ -303,6 +303,26 @@ a:focus, [tabindex="0"]:focus {
   text-decoration: none;
 }
 
+.id-link {
+	  padding: .5em .75em;
+	  border: 0;
+	  color: #2D315D;
+	  font-size: 1.125rem;
+	  font-weight: bold;
+	  text-decoration: none;
+		width: 10em;
+	}
+
+.id-link:hover {
+		height:200%;
+	transform: translateY(10px);
+	transition: all ease 400ms;
+}
+
+.id-link:focus {
+	outline-offset: 3px;
+}
+
 .skip-links a:focus,
 .skip-links button:focus {
   outline-offset: 3px;
@@ -440,7 +460,7 @@ a:focus, [tabindex="0"]:focus {
   -ms-flex-grow: 2;
   -webkit-flex-grow: 2;
   flex-grow: 2;
-  max-width: 100%; /* @bugfix: IE 10, 11 */
+  max-width: 100%;
 }
 
 .content-shrink {
@@ -575,7 +595,7 @@ a:focus, [tabindex="0"]:focus {
   -ms-flex-grow: 2;
   -webkit-flex-grow: 2;
   flex-grow: 2;
-  max-width: 100%; /* @bugfix: IE 10, 11 */
+  max-width: 100%;
 }
 
 .xs-content-shrink {
@@ -712,7 +732,7 @@ a:focus, [tabindex="0"]:focus {
     -ms-flex-grow: 2;
     -webkit-flex-grow: 2;
     flex-grow: 2;
-    max-width: 100%; /* @bugfix: IE 10, 11 */
+    max-width: 100%;
   }
 
   .s-content-shrink {
@@ -1154,7 +1174,7 @@ p,
   fieldset,
   pre,
   table,
-	caption {
+	caption, h4, h5 ,h6 {
 		font-family: bebas-neue-pro, sans-serif;
 		font-weight: 400;
 		font-style: normal;
@@ -1192,7 +1212,7 @@ width: 5em;
   fill: #2D315D;
 }
 
-.icon a svg:hover, .icon a svg:focus .icon a svg:{
+.icon a svg:hover, .icon a svg:focus .icon a svg:active{
 	fill: #0096A4;
 	width: 125%;
 }
@@ -2624,6 +2644,8 @@ legend {
 
 }
 
+/*Personal CSS*/
+
 html, button {
 	font-family: bebas-neue-pro, sans-serif;
 	font-weight: 600;
@@ -2838,8 +2860,7 @@ html, button {
 }
 
 .title-case {
-  max-height: 429px;
-  width: 55vw;
+  width: 68vw;
 }
 
 
@@ -2858,7 +2879,6 @@ html, button {
 	text-shadow: 1px 1px #fff;
 }
 
-
 .title {
   transition: all ease 400ms;
 }
@@ -2876,7 +2896,6 @@ html, button {
 	width:6em;
 	height:auto;
 }
-
 
 .countdown {
   position: absolute;
@@ -2921,7 +2940,7 @@ footer {
 	position: relative;
 }
 
-nav a,
+nav a, nav button,
 .page-button, .link-button {
   text-decoration: none;
   color: #2D315D;
@@ -2931,17 +2950,18 @@ nav a,
   margin-bottom: .75em;
   font-size: .75rem;
   transition: all ease 400ms;
+	border-radius:0;
+	background-color: rgb(44,44,44,0);
 }
 
 .link-button {
 	width: 10em;
 	height: 100%;
 	font-size: 1.5rem;
-	paddingt
 }
 
-nav a:hover,
-.page-button:hover, .link-button:hover {
+nav a:hover, nav button:hover,
+.page-button:hover, .link-button:hover, .id-link:hover {
   padding: 1em 2em;
 }
 
@@ -2983,7 +3003,7 @@ h3 {
 }
 
 
-//**Photo gallery**//
+/**Photo gallery**/
 
 img {
   vertical-align: middle;
@@ -3001,6 +3021,21 @@ img {
 
 .mySlides {
   display: none;
+}
+
+.mySlides3 {
+  display: none;
+}
+
+.prev-next {
+	margin-left:auto;
+	margin-right: auto;
+}
+
+.title2 {
+	width: 64%;
+	display: inline-block;
+	padding: 5px 0;
 }
 
 .cursor {
@@ -3021,6 +3056,52 @@ img {
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+}
+
+.prev3,
+.next3 {
+  cursor: pointer;
+  dislay: inline-block;
+	width: 10%;
+	padding: 5px 8px;
+}
+
+.prev3:hover,
+.next3:hover {
+  background-color: #2D315D;
+	color: #E1B000;
+}
+
+.dots, .dots2, .dots3 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active3, .dots:hover, .dots2:hover, .dots3:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
 .next {
@@ -3048,10 +3129,12 @@ img {
   color: #2D315D;
 }
 
+
 .row:after {
   content: "";
   display: table;
   clear: both;
+	
 }
 
 .column-1-6 {
@@ -3124,10 +3207,13 @@ img {
   }
 	
 	.countdown {
-	left: 9rem;
-  bottom: -10rem;
-
-}
+		left: 9rem;
+	  bottom: -10rem;
+	}
+	
+	.title2 {
+		width: 72%;
+	}
 
 }
 
@@ -3151,6 +3237,11 @@ img {
 	  max-width: 429px;
 	  height: 55vh;
 	}
+	
+	.title-case {
+	  width: 85vw;
+	}
+
 	
 	.border {
     padding: 3.5em;
@@ -3258,20 +3349,12 @@ img {
     transition: all ease-out 400ms;
     animation: point 800ms ease-out;
   }
-
-  @keyframes point {
-    from {
-      transform: translateY(30px) translateX(-50%);
-      opacity: 0;
-    }
-
-    to {
-      transform: translateY(0px) translateX(-50%);
-      opacity: 1;
-    }
-  }
-
-  .card .card-link:hover .arrow > img {
+	
+	.title2 {
+		width: 81%;
+	}
+	
+ .card .card-link:hover .arrow > img {
     transform: translateY(-10px) translateX(-50%);
   }
 
@@ -3307,8 +3390,18 @@ img {
     width: 100%;
     height: 100%;
   }
-
 }
+  @keyframes point {
+    from {
+      transform: translateY(30px) translateX(-50%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0px) translateX(-50%);
+      opacity: 1;
+    }
+  }
 
 @media only screen and (min-width: 104em) {
 
@@ -3333,7 +3426,6 @@ img {
 /* popup question box */
 
 
-/* Set a style for all buttons */
 .question-button {
   padding: 14px 20px;
   margin: 8px 0;
@@ -3347,14 +3439,12 @@ img {
   opacity:1;
 }
 
-/* Float cancel and delete buttons and add an equal width */
 .cancelbtn, .deletebtn {
   float: left;
   width: 50%;
 	font-weight: 400!important;
 }
 
-/* Add a color to the cancel button */
 .cancelbtn {
   background-color: #ccc;
   color: black;
@@ -3366,7 +3456,6 @@ img {
 	color: #2D315D;
 }
 
-/* Add padding and center-align text to the container */
 .question-container, .question-container p {
   padding: 16px;
   text-align: center;
@@ -3374,35 +3463,31 @@ img {
 	margin-right: auto;
 }
 
-/* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   background-color: #2D315D;
   padding-top: 50px;
 }
 
-/* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  margin: 5% auto 15% auto;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
 }
 
-/* Style the horizontal ruler */
 hr {
   border: 1px solid #2D315D;
   margin-bottom: 25px;
 }
- 
-/* The Modal Close Button (x) */
+
 .question-close {
   position: absolute;
   right: 35px;
@@ -3418,17 +3503,111 @@ hr {
   cursor: pointer;
 }
 
-/* Clear floats */
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
 
-/* Change styles for cancel button and delete button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .deletebtn {
      width: 100%;
   }
+}
+
+/* Flip cards */
+
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Sidebar */
+	
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #2D315D;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #E1B000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #0096A4;
+	padding-left: 16px!important;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+.closebtn {
+	width: 3rem;
+}
+
+.second {
+font-weight: 200;
+} 
+
+#main {
+  transition: margin-right .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 

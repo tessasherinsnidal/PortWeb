@@ -13,8 +13,16 @@
 </head>
 	
 <body>
-
-  <main>
+<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+	  <a href="#">About</a>
+	  <a href="#">Services</a>
+	  <a href="#">Clients</a>
+	  <a href="#">Contact</a>
+	</div>
+  <main id="main">
+	  
+	<button class="openbtn" onclick="openNav()">☰ Open Sidebar</button> 
 
 	 <div class="banner">
 		<img class="img-flex" src="./images/bg-branding.svg" alt="backgound-img">
@@ -73,6 +81,7 @@
   
 	<nav>
 	  <ul class="list-group buttons">
+		<li><button class="openbtn button btn-gold kilo" onclick="openNav()">☰</button></li>
 		<li><a class="button btn-gold kilo" href="./home.html">Home</a></li>
 		<li><a class="button btn-gold kilo" href="./shop.html">Shop</a></li>
 		<li><a class="button btn-gold kilo" href="./about.html">About</a></li>
