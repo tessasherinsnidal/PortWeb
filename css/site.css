@@ -316,7 +316,7 @@ a:focus, [tabindex="0"]:focus {
 .id-link:hover {
 		height:200%;
 	transform: translateY(10px);
-	transition: all ease 400ms;
+	transition: all ease 200ms;
 }
 
 .id-link:focus {
@@ -1215,6 +1215,7 @@ width: 5em;
 .icon a svg:hover, .icon a svg:focus .icon a svg:active{
 	fill: #0096A4;
 	width: 125%;
+	transition: all ease 200ms;
 }
 
 .border-top {
@@ -2661,6 +2662,7 @@ html, button {
   height: 100vh;
   padding: 2em;
   position: relative;
+	overflow: hidden;
 }
 
 .banner {
@@ -2872,7 +2874,7 @@ html, button {
   position: absolute;
   top: 65%;
   left: -.75em;
-  transition: all ease-out 400ms;
+  transition: all ease-out 200ms;
   color: #2D315D;
   line-height: .925;
   z-index: 1;
@@ -2880,7 +2882,7 @@ html, button {
 }
 
 .title {
-  transition: all ease 400ms;
+  transition: all ease 200ms;
 }
 
 .text {
@@ -2949,7 +2951,7 @@ nav a, nav button,
   display: inline-block;
   margin-bottom: .75em;
   font-size: .75rem;
-  transition: all ease 400ms;
+  transition: all ease 200ms;
 	border-radius:0;
 	background-color: rgb(44,44,44,0);
 }
@@ -2963,6 +2965,7 @@ nav a, nav button,
 nav a:hover, nav button:hover,
 .page-button:hover, .link-button:hover, .id-link:hover {
   padding: 1em 2em;
+	color: #0096A4;
 }
 
 h3 {
@@ -3315,7 +3318,7 @@ img {
 
   .card > a {
     background-color: rgba(0,0,0,0);
-    transition: all ease-out 400ms;
+    transition: all ease-out 200ms;
   }
 
   .card > a:hover {
@@ -3328,7 +3331,7 @@ img {
     position: absolute;
     top: 65%;
     left: -.75em;
-    transition: all ease-out 400ms;
+    transition: all ease-out 200ms;
     color: #2D315D;
     line-height: .925;
     z-index: 1;
@@ -3346,7 +3349,7 @@ img {
     bottom: -1em;
     left: 50%;
     transform: translateX(-50%);
-    transition: all ease-out 400ms;
+    transition: all ease-out 200ms;
     animation: point 800ms ease-out;
   }
 	

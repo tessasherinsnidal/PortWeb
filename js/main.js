@@ -47,7 +47,7 @@
 			var toRotate = elements[i].getAttribute('data-type');
 			var period = elements[i].getAttribute('data-period');
 			if (toRotate) {
-			  new TxtType(elements[i], JSON.parse(toRotate), period);
+			new TxtType(elements[i], JSON.parse(toRotate), period);
 			}
 		}
 		// INJECT CSS
@@ -64,156 +64,100 @@
 	// Update the count down every 1 second
 	var x = setInterval(function() {
 
-	  // Get today's date and time
-	  var now = new Date().getTime();
+	// Get today's date and time
+	var now = new Date().getTime();
 
-	  // Find the distance between now and the count down date
-	  var distance = countDownDate - now;
+	// Find the distance between now and the count down date
+	var distance = countDownDate - now;
 
-	  // Time calculations for days, hours, minutes and seconds
-	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	// Time calculations for days, hours, minutes and seconds
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-	  // Display the result in the element with id="**"
+	// Display the result in the element with id="**"
 		document.getElementById("days").innerHTML = days;
 		document.getElementById("hours").innerHTML = hours;
 		document.getElementById("mins").innerHTML = minutes;
 		document.getElementById("secs").innerHTML = seconds;
 
 
-	  // If the count down is finished, write some text
-	  if (distance < 0) {
+	// If the count down is finished, write some text
+	if (distance < 0) {
 		clearInterval(x);
 		document.getElementById("days").innerHTML = "EXPIRED";
-	  }
+		}
 	}, 1000);
 
 //***Gallery click***//
 	var slideIndex = 1;
-	showSlides(slideIndex);
+		showSlides(slideIndex);
 
 	function plusSlides(n) {
-	  showSlides(slideIndex += n);
+		showSlides(slideIndex += n);
 	}
 
 	function currentSlide(n) {
-	  showSlides(slideIndex = n);
+		showSlides(slideIndex = n);
 	}
 
 	function showSlides(n) {
-	  var i;
-	  var slides = document.getElementsByClassName("mySlides");
-	  var dots = document.getElementsByClassName("demo");
-	  var captionText = document.getElementById("caption");
-	  if (n > slides.length) {slideIndex = 1}
-	  if (n < 1) {slideIndex = slides.length}
-	  for (i = 0; i < slides.length; i++) {
-		  slides[i].style.display = "none";
-	  }
-	  for (i = 0; i < dots.length; i++) {
-		  dots[i].className = dots[i].className.replace(" active", "");
-	  }
-	  slides[slideIndex-1].style.display = "block";
-	  dots[slideIndex-1].className += " active";
-	  captionText.innerHTML = dots[slideIndex-1].alt;
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("demo");
+		var captionText = document.getElementById("caption");
+		if (n > slides.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " active";
+		captionText.innerHTML = dots[slideIndex-1].alt;
 	}
 
 //***Gallery click no thumbnails***//
 	var slideIndex3 = 1;
-	showSlides3(slideIndex3);
+		showSlides3(slideIndex3);
 
 	function plusSlides3(n) {
-	  showSlides3(slideIndex3 += n);
+		showSlides3(slideIndex3 += n);
 	}
 
 	function currentSlide3(n) {
-	  showSlides3(slideIndex3 = n);
+		showSlides3(slideIndex3 = n);
 	}
 
 	function showSlides3(n) {
-	  var i;
-	  var slides3 = document.getElementsByClassName("mySlides3");
-	  var dots3 = document.getElementsByClassName("dots3");
+		var i;
+		var slides3 = document.getElementsByClassName("mySlides3");
+		var dots3 = document.getElementsByClassName("dots3");
 		var section3 = document.getElementsByClassName("demo3");
-	  var captionText3 = document.getElementById("caption3");
-	  if (n > slides3.length) {slideIndex3 = 1}
-	  if (n < 1) {slideIndex3 = slides3.length}
-	  for (i = 0; i < slides3.length; i++) {
-		  slides3[i].style.display = "none";
-	  }
-	  for (i = 0; i < dots3.length; i++) {
-		  dots3[i].className = dots3[i].className.replace(" active3", "");
-	  }
-	  slides3[slideIndex3-1].style.display = "block";
-	  dots3[slideIndex3-1].className += " active3";
-	  captionText3.innerHTML = section3[slideIndex3-1].alt;
-	}
-
-///***Click next slideshow***///
-
-	var slideIndex = 1;
-	showDivs(slideIndex);
-
-	function plusDivs(n) {
-	  showDivs(slideIndex += n);
-	}
-
-	function currentDiv(n) {
-	  showDivs(slideIndex = n);
-	}
-
-	function showDivs(n) {
-	  var i;
-	  var x = document.getElementsByClassName("mySlides");
-	  var dots = document.getElementsByClassName("demo");
-	  if (n > x.length) {slideIndex = 1}
-	  if (n < 1) {slideIndex = x.length}
-	  for (i = 0; i < x.length; i++) {
-		 x[i].style.display = "none";
-	  }
-	  for (i = 0; i < dots.length; i++) {
-		 dots[i].className = dots[i].className.replace(" w3-white", "");
-	  }
-	  x[slideIndex-1].style.display = "block";
-	  dots[slideIndex-1].className += " w3-white";
-	}
-
-	var slideIndex = 1;
-	showDivs2(slideIndex);
-
-	function plusDivs2(n) {
-	  showDivs2(slideIndex += n);
-	}
-
-	function currentDiv2(n) {
-	  showDivs2(slideIndex = n);
-	}
-
-	function showDivs2(n) {
-	  var i;
-	  var x = document.getElementsByClassName("mySlides2");
-	  var dots = document.getElementsByClassName("demo2");
-	  if (n > x.length) {slideIndex = 1}
-	  if (n < 1) {slideIndex = x.length}
-	  for (i = 0; i < x.length; i++) {
-		 x[i].style.display = "none";
-	  }
-	  for (i = 0; i < dots.length; i++) {
-		 dots[i].className = dots[i].className.replace(" w3-black", "");
-	  }
-	  x[slideIndex-1].style.display = "block";
-	  dots[slideIndex-1].className += " w3-black";
+		var captionText3 = document.getElementById("caption3");
+		if (n > slides3.length) {slideIndex3 = 1}
+		if (n < 1) {slideIndex3 = slides3.length}
+		for (i = 0; i < slides3.length; i++) {
+			slides3[i].style.display = "none";
+		}
+		for (i = 0; i < dots3.length; i++) {
+			dots3[i].className = dots3[i].className.replace(" active3", "");
+		}
+		slides3[slideIndex3-1].style.display = "block";
+		dots3[slideIndex3-1].className += " active3";
+		captionText3.innerHTML = section3[slideIndex3-1].alt;
 	}
 
 ///*** Sidebar ***///
 	function openNav() {
-	  document.getElementById("mySidebar").style.width = "250px";
-	  document.getElementById("main").style.marginRight = "250px";
+		document.getElementById("mySidebar").style.width = "250px";
+		document.getElementById("main").style.marginRight = "250px";
 	}
 
 	function closeNav() {
-	  document.getElementById("mySidebar").style.width = "0";
-	  document.getElementById("main").style.marginRight= "0";
+		document.getElementById("mySidebar").style.width = "0";
+		document.getElementById("main").style.marginRight= "0";
 	}
