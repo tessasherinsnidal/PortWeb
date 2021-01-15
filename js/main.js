@@ -194,3 +194,10 @@
 			anImage.src = anAltSrcArr[gStorage[id].i - 1];
 		}
 	}
+
+/*for page loader read load*/
+
+window.onload = function() {
+  document.getElementById('loader-wrapper').className = 'loaded';
+document.getElementById('loader').className = 'loaded';
+};
