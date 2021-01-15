@@ -2847,7 +2847,7 @@ html, button {
 }
 
 .img-four {
-  background-image: url("../images/bg-branding.svg");
+  background-image: url("../images/bg-branding.png");
   background-size: cover;
   background-position: center;
   position: relative;
