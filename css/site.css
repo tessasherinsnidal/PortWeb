@@ -148,7 +148,6 @@ a,
 area,
 button,
 input,
-<link href="/YOUR_PATH/favicon.ico" rel="icon" type="image/x-icon" />label<link href="/YOUR_PATH/favicon.ico" rel="icon" type="image/x-icon" />href="http://example.com/myicon.png"href="http://example.com/myicon.png"href="http://example.com/myicon.png"<link rel="shortcut icon" href="{{site.baseurl}}/images/favicon.png"><link rel="shortcut icon" href="{{site.baseurl}}/images/favicon.png"><link rel="shortcut icon" href="{{site.baseurl}}/images/favicon.png"><link rel="shortcut icon" href="{{site.baseurl}}/images/favicon.png"><link rel="shortcut icon" href="{{site.baseurl}}/images/favicon.png"><link rel="shortcut icon" href="{{site.baseurl}}/images/favicon.png"><link rel="shortcut icon" href="{{site.baseurl}}/images/favicon.png"><link rel="shortcut icon" href="{{site.baseurl}}/images/favicon.png">,
 select,
 textarea,
 [tabindex] {
@@ -3471,6 +3470,55 @@ img {
 
 }
 
+
+/* Flip cards */
+
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+	-webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #E1B000;
+  color: #2D315D;
+  transform: rotateY(180deg);
+}
+
+.screens {
+	max-height: 90vh;
+	width:auto;
+}
+
+
 /* popup question box */
 
 
@@ -3561,48 +3609,6 @@ hr {
   .cancelbtn, .deletebtn {
      width: 100%;
   }
-}
-
-/* Flip cards */
-
-.flip-card {
-  background-color: transparent;
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-	-webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: #E1B000;
-  color: #2D315D;
-  transform: rotateY(180deg);
 }
 
 .screens {
