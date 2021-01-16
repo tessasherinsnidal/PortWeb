@@ -2923,11 +2923,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .countdown {
-  position: absolute;
-  bottom: -7rem;
-  left: 5rem;
   text-align: center;
 	width: 100%;
+}
+
+.yup {
+	position: absolute;
+	left: 43%;
+	top: 63%;
+	margin-left: -20px;
+	margin-left: -20px;
+	z-index: 1020;
 }
 
 .timer {
@@ -3738,6 +3744,7 @@ font-weight: 200;
   font-weight: 600;
   left: 47%;
   top: 58%;
+  margin-left: -20px;
   margin-left: -20px;
   z-index: 1010;
 }
