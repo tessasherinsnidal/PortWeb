@@ -200,10 +200,20 @@
 	window.onload = function() {
 		document.getElementById('body').className += " loaded";
 		setTimeout(function(){
-         document.getElementById('interactive');
-         document.getElementById('load').style.visibility="hidden";
-         document.getElementById('contents').style.visibility="visible";
-      },1000);
+         document.getElementById('body').className += " loaded";
+      },200);
 	}
 
+	function onReady(callback) {
+	var intervalId = window.setInterval(function() {
+		if (document.getElementsByTagName('body')[0] !== undefined) {
+		window.clearInterval(intervalId);
+		callback.call(this);
+		}
+		}, 1000);
+	}
+
+	onReady(function() {
+		document.getElementById('body').className = "loaded";
+	});
 
