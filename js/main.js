@@ -197,10 +197,6 @@
 
 /*for page loader read load*/
 
-	window.onload = function() {
-		document.getElementById('body').className = 'loaded';
-	};
-	setTimeout(function() {
-		document.getElementById('body').className = "loaded";
-	}, 1000);
-
+window.onload = function() {
+  document.getElementById('body').className = 'loaded';
+};
