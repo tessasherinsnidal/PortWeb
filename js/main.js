@@ -198,6 +198,6 @@
 /*for page loader read load*/
 
 	document.onload = function() {
-		document.getElementById("body").classList.add('loaded');
+		document.getElementById("please").classList.add('loaded');
 	};
 
