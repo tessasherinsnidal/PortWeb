@@ -197,7 +197,7 @@
 
 /*for page loader read load*/
 
-	document.onload = function() {
-		document.getElementById("please").classList.add('loaded');
+	window.onload = function() {
+		document.getElementById('body').className = "loaded";
 	};
 
