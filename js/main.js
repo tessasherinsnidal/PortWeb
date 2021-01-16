@@ -198,11 +198,12 @@
 /*for page loader read load*/
 
 	window.onload = function() {
-		document.getElementById('body').className = "loaded";
+		document.getElementById('body').className += " loaded";
 		setTimeout(function(){
          document.getElementById('interactive');
          document.getElementById('load').style.visibility="hidden";
          document.getElementById('contents').style.visibility="visible";
       },1000);
 	}
+
 
