@@ -198,6 +198,6 @@
 /*for page loader read load*/
 
 window.onload = function() {
-  document.getElementById('loader-wrapper').className = 'loaded';
-document.getElementById('loader').className = 'loaded';
+  document.getElementById('body').className = 'loaded';
 };
+
