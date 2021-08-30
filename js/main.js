@@ -59,7 +59,8 @@
 
 //***Countdown timer***//
 	// Set the date to count down to
-	var countDownDate = new Date("August 31, 2021 00:00:00").getTime();
+	var countDownDate = new Date("September 30
+, 2021 00:00:00").getTime();
 
 	// Update the count down every 1 second
 	var x = setInterval(function() {
